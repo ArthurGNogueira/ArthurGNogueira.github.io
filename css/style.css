@@ -1,0 +1,239 @@
+
+:root {
+    --bg-color:   #ffffff;
+    --cards-color:#f0f0f0;
+    --chips-color:#dbdbdb;
+    --bg-card-img:#c6c6c6;
+
+    --text-color-1:rgba(0, 0, 0, 0.85);
+    --text-color-2:rgba(0, 0, 0, 0.50);
+
+}
+
+.dark-mode:root {
+    --bg-color:   #121212;
+    --cards-color:#1d1d1d;
+    --chips-color:#373737;
+    --bg-card-img:#121212;
+
+    --text-color-1:rgba(255, 255, 255, 0.95);
+    --text-color-2:rgba(255, 255, 255, 0.60);
+}
+h1,h2,h3,h4,h5{
+    color: var(--text-color-1)!important;
+}
+p{
+    color: var(--text-color-1)!important;
+}
+.text-muted{
+    color: var(--text-color-2)!important;
+}
+a,label{
+    color: var(--text-color-1)!important;
+
+}
+body{
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+.container {
+    background-color: var(--cards-color);
+    /*box-shadow: 3px 3px 20px 0px rgb(0 0 0 / 40%)*/
+    margin-top: 20px;
+    
+
+}
+
+.content-scroll {
+    position: relative;
+    overflow: auto;
+    height: 900px;
+    scroll-behavior: smooth;
+    border-left: solid 1px var(--chips-color);
+
+}
+
+#expandedNav{
+    max-width: 100px;
+    position: absolute;
+    margin-left: 20px;
+    bottom: 40px;
+    z-index: 7;
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .main-menu{
+        display: none;
+    }
+    #expandedNav{
+        display: block;
+    }
+    .myCard{
+        margin: 20px 10px!important;
+    }
+  }
+
+.navVisible{
+    width: 75%;
+    height: 100%;
+    background-color: var(--cards-color)!important;
+    z-index: 1;
+    position: absolute;
+    display:block;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-color-1) var(--bg-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--cards-color);
+    border-radius: 10px;
+    border: 3px solid var(--bg-color);
+}
+
+
+#img-perfil {
+    border-radius: 50%;
+    border: solid #c8cac8 2px;
+    width: 80%;
+    height: 80%
+}
+.main-menu{
+    background-color: var(--cards-color)!important;
+}
+#parallax-section {
+    /*background-image: url("../img/bg-img02.jpg");*/
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 0% 20%;
+
+}
+
+.hardskills{
+    margin-top: 40px;
+}
+.card{
+    background-color: var(--cards-color);
+}
+.myCard {
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: var(--chips-color);
+    text-align: center;
+    transition: transform .15s;
+    /* Animation */
+}
+
+.myCard:hover {
+    transform: scale(1.05);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.myCard-img {
+    position: relative;
+    top: 15px;
+}
+
+.card-background-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 85px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--bg-card-img);
+
+}
+
+.card-background-img>img {
+    border-radius: 50%;
+}
+
+.myCard>p {
+    margin-top: 40px;
+}
+
+.list-card {
+    margin-top: 40px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--cards-color);
+}
+
+.item {
+    padding-top: 40px;
+}
+.contato{
+    margin-bottom: 200px;
+}
+
+.icon {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.tracking-in-expand {
+    animation: tracking-in-expand 2s cubic-bezier(.215, .61, .355, 1.000) .2s
+}
+
+.tracking-in-expand-04 {
+    animation: tracking-in-expand 5s cubic-bezier(.215, .61, .355, 1.000) .2s
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes tracking-in-expand-04 {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
