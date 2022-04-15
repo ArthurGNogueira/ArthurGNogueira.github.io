@@ -36,12 +36,12 @@
                     
                       <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     -->
-                <ul class="navbar-nav">
-                    <div class="container-fluid">
+                <ul class="navbar-nav" style="width: 100%;">
+                    <div class="container-fluid" style="display: flex;justify-content: center;">
                         <img id="img-perfil" src="img/perfil.jpg" alt="" class="d-inline-block align-text-top">
                     </div>
                     <br>
-                    <a class="navbar-brand" href="#parallax-section">Arthur Guerra Nogueira</a>
+                    <a class="navbar-brand" href="#parallax-section">Arthur G. Nogueira</a>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#item-0">SOBRE</a>
                     </li>
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="item" id="item-0">
-                    <h4 id="scrollspyHeading1">SOBRE</h4>
+                    <h3 id="scrollspyHeading1">SOBRE</h3>
                     <p>Busco atuar na área de segurança da informação, adquirindo conhecimento e contribuindo com a
                         empresa
                         para
@@ -103,13 +103,13 @@
                     </p>
                 </div><br>
                 <div class="item" id="item-1">
-                    <h4>EXPERIÊNCIA</h4><br>
+                    <h3>EXPERIÊNCIA</h3><br>
                     <!-- Card experiência-->
                     <div class="card-group">
 
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-img-card">
                                     <img src="img/supergeeks.png" class="img-fluid rounded-start"
                                         style="padding: 1rem 1rem;" alt="...">
                                 </div>
@@ -131,7 +131,7 @@
 
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-img-card" >
                                     <img src="img/tempest.jpg" class="img-fluid rounded-start"
                                         style="padding: 1rem 1rem;" alt="...">
                                 </div>
@@ -156,14 +156,14 @@
                 </div><br>
                 <div class="item" id="item-2">
                     <br>
-                    <h4>Formação</h4>
+                    <h3>Formação</h3>
                     <br>
                     <!-- Card formação-->
                     <div class="card-group">
 
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-img-card">
                                     <img src="img/anhembi.png" class="img-fluid rounded-start"
                                         style="padding: 1rem 1rem;" alt="...">
                                 </div>
@@ -188,7 +188,7 @@
 
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-img-card">
                                     <img src="img/etec.jpg" class="img-fluid rounded-start" style="padding: 1rem 1rem;"
                                         alt="...">
                                 </div>
@@ -219,7 +219,7 @@
 
             
             <div class="hardskills">
-            <h4>Linguagens e Tecnologias</h4>
+            <h3>Linguagens e Tecnologias</h3>
             <div class="list-card">
                 <div class="myCard">
                     <div class="card-background-img">
@@ -325,12 +325,24 @@
             </div>
         </div>
 
-        <button class="btn btn-primary" id="expandedNav" type="button">
-            Menu
-        </button>
-    </div>
-    </div>
+        <!-- <button  id="expandedNav" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
 
+        <div class="container-btn-menu" onclick="activeMenu(this)" id="expandedNav">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+
+    </div>
+    </div>
+    <script>
+        function activeMenu(x) {
+          x.classList.toggle("change");
+        }
+    </script>
+        
     <link href="css/style.css" rel="stylesheet">
 
     <script src="js/mainScript.js"></script>
